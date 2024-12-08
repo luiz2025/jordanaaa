@@ -1,0 +1,72 @@
+/* Definição de estilos gerais */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #96305a; /* Cor de fundo roxa */
+  overflow: hidden;
+  position: relative; /* Necessário para garantir que os elementos abaixo fiquem centralizados */
+}
+
+/* Estilo da imagem de fundo */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('Natal.png'); /* Caminho da imagem da árvore de Natal */
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Coloca a imagem atrás dos outros elementos */
+}
+
+/* Estilo do envelope */
+.envelope {
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.envelope:hover {
+  transform: scale(1.1);
+}
+
+/* Estilo da mensagem de Natal */
+.mensagem-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; /* Aumentando a largura para 60% */
+  max-width: 720px; /* Garantindo que a largura máxima da caixa seja maior */
+  padding: 30px;
+  box-sizing: border-box;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Aplica o desfoque de fundo */
+  backdrop-filter: blur(5px);
+}
+
+/* Estilo da mensagem de texto */
+.mensagem {
+  background-color: rgba(255, 255, 255, 0.4); /* Cor de fundo com opacidade */
+  padding: 20px;
+  border: 3px solid red;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+.mensagem p {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  line-height: 1.6;
+}
